@@ -1,0 +1,18 @@
+body {
+  background: #222;
+  color: #ccc;
+  padding: 30px 0px 10px 0px;
+}
+
+div > div {
+  padding: 10px;
+}
+
+input, input:focus, input:active {
+  padding: 5px;
+  min-width: 350px;
+  background: #444;
+  color: #ccc;
+  border-radius: 5px;
+  border: none;
+}

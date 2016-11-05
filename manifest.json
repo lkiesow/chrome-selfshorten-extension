@@ -2,13 +2,20 @@
   "manifest_version": 2,
 
   "name": "SelfShorten",
-  "description": "This extension shortens URLs for specific sites like Amazon, Reichelt or Pollin using their own sites by removing unnecessary parts of the URL.",
+  "description": "This extension shortens URLs for specific sites using their own services by removing unnecessary parts of the URL. Sites currently supported are: Amazon, Reichelt, Pollin, DealExtreme",
   "version": "1.0",
+  "author": "Lars Kiesow",
+
+  "icons": {
+     "16": "icon.svg",
+     "48": "icon.svg",
+     "128": "icon.svg"
+  },
 
   "browser_action": {
     "default_icon": "icon.png",
     "default_popup": "popup.html",
-	 "default_title": "Shorten URL…"
+    "default_title": "Shorten URL…"
   },
   "permissions": [
     "activeTab"
