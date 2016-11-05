@@ -5,6 +5,8 @@
   "description": "This extension shortens URLs for specific sites using their own services by removing unnecessary parts of the URL. Sites currently supported are: Amazon, Reichelt, Pollin, DealExtreme",
   "version": "1.0",
   "author": "Lars Kiesow",
+  "default_locale": "en",
+  "homepage_url": "https://github.com/lkiesow/chrome-selfshorten-extension",
 
   "icons": {
      "16": "icon.svg",
