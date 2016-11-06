@@ -57,14 +57,22 @@ function shortenAmazon(url) {
   });
 }
 
+function shortenEbay(url) {
+  var re = /^https{0,1}:\/\/.{0,4}(ebay\..{2,3})\/itm\/.*\/(\d+).*$/;
+  return url.replace(re, function(match, domain, x, offset, string) {
+    return 'http://' + domain + '/itm/' + x;
+  });
+}
+
 document.addEventListener('DOMContentLoaded', function() {
   getCurrentTabUrl(function(url) {
     // Put the image URL in Google search.
     setContent('original-url', url);
-	 url.indexOf('pollin.de') >= 0 && setContent('short-url', shortenPollin(url));
-	 url.indexOf('dx.com') >= 0 && setContent('short-url', shortenDealExtreme(url));
-	 url.indexOf('reichelt.de') >= 0 && setContent('short-url', shortenReichelt(url));
-	 url.indexOf('amazon.') >= 0 && setContent('short-url', shortenAmazon(url));
+    url.indexOf('pollin.de') >= 0 && setContent('short-url', shortenPollin(url));
+    url.indexOf('dx.com') >= 0 && setContent('short-url', shortenDealExtreme(url));
+    url.indexOf('reichelt.de') >= 0 && setContent('short-url', shortenReichelt(url));
+    url.indexOf('amazon.') >= 0 && setContent('short-url', shortenAmazon(url));
+    url.indexOf('ebay.') >= 0 && setContent('short-url', shortenEbay(url));
 
     document.getElementById('short-url').focus();
     document.getElementById('short-url').select();

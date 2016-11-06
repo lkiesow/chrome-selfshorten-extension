@@ -28,6 +28,7 @@ Supported Sites
 ---------------
 
 - Amazon
+- Ebay
 - Reichelt Elektronik
 - Pollin Elektronik
 - DealExtreme
